@@ -1,0 +1,9 @@
+*.cs                                mime-type=text/x-csharp
+*.csproj                            mime-type=application/x-csproj
+*.ico                      binary   mime-type=image/x-icon
+*.html                              mime-type=text/html
+*.manifest                          mime-type=application/xml
+*.resx                              mime-type=application/x-resourcesx
+*.png                      binary   mime-type=image/png
+*.sln                               mime-type=application/x-sln
+LinguaLeoDownloader.csproj dotnet=4 mime-type=application/x-csproj
