@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta name="language" content="ru">
+<title><%# Program.Name %></title>
+<link href="http://lingualeo.com/new-leo-logo.png" rel="image_src">
+<link href="http://lingualeo.com/favicon.ico" rel="shortcut icon">
+<link href="http://d1qwsfxu27215y.cloudfront.net/5454e48d2/css/en/main-combine.css" rel="stylesheet" type="text/css" media="screen">
+<link href="http://d1qwsfxu27215y.cloudfront.net/bc632ceb2/css/en/styles-combine.css" rel="stylesheet" type="text/css" media="screen">
+<link href="http://d1qwsfxu27215y.cloudfront.net/6a6a4b4a2/css/en/course/course-navigate.css" rel="stylesheet" type="text/css" media="screen">
+<!--[if lte IE 8]>
+<link rel="stylesheet" type="text/css" media="screen" href="http://d1qwsfxu27215y.cloudfront.net/c18076d02/css/en/ie/ie.css" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" media="screen" href="http://d1qwsfxu27215y.cloudfront.net/be73f85e2/css/en/ie/ie9.css" />
+<![endif]-->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&amp;subset=cyrillic-ext,latin" rel="stylesheet">
+</head>
+<body class="background-default   authorized-user lang-en native-lang-rubody-ie-bg rv rv11.0 win fixed-footer">
+<div class="body-bg-top"></div><div class="body-bg-bot"></div>
+<div class="l-wrapper-content l-center " data-wrapper-content=""><div class="l-header l-center"></div>
+<div class="l-content l-center "><div class="l-content-inner">
+<div class="course-nav" id="content" style="display: block;" data-course-list-block="">
+<div class="course-nav-inner" data-course-list=""><div class="promo-program" data-program="">
+	<div class="progr-title  "><%# Program.Name %></div>
+	<div class="progr-info">
+		<div class="progr-info-item"> <i class="icons-list-level"></i> For <%# Program.Level %> level </div>
+		<div class="progr-info-item"> <i class="icons-list-author"></i> Author: <%# Program.Author %> </div>
+	</div>
+	<div class="progr-image" style='background-image: url("images/<%# Program.CoverFile %>");'>   </div>
+	<div class="progr-content">
+		<div class="progr-subtitle"> <%# Program.Description %> </div>
+</div>
+<% foreach(var GroupByLevel in FromCoursesGroupByLevel) { %><div class="course-group" data-group-root="">
+	<h3 class="course-title-level"><%# GroupByLevel.Key %></h3>
+	<div class="course-items clearfix">
+<% foreach(var Course in GroupByLevel) { %>		<a class="cour-item  cour-type-<%# Program.Type %>" href="<%# Course.ID %>/Lesson_<%# Course.FirstLesson %>.html" data-start-course="<%# Course.ID %>">
+	<div class="cour-item-step hidden"> <span class="step-number">1</span> <span class="step-congrat"></span> </div>
+	<div class="img" style='background-image: url("images/<%# Course.PicFile %>");'></div>
+	<div class="title"> <div class="title-inner"><%# Course.Name %></div> </div>
+</a>
+<% } %>	</div>
+</div>
+<% } %></div></div></div></div></div>
+</body>
+</html>

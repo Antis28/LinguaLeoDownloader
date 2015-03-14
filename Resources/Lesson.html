@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta name="language" content="ru" />
+<title>Course "<%# Course.Name %>" &mdash; LinguaLeo</title>
+<link rel="image_src" href="http://lingualeo.com/leo-logo.png" />
+<link rel="shortcut icon" href="http://lingualeo.com/favicon.ico"/>
+<link rel="stylesheet" type="text/css" media="screen" href="http://d1qwsfxu27215y.cloudfront.net/3e77fcd42/css/en/main-combine.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://d1qwsfxu27215y.cloudfront.net/c230883f2/css/en/styles-combine.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://d1qwsfxu27215y.cloudfront.net/51d327532/css/en/course/course-default.css" />
+<!--[if lte IE 8]>
+<link rel="stylesheet" type="text/css" media="screen" href="http://d1qwsfxu27215y.cloudfront.net/c18076d02/css/en/ie/ie.css" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" media="screen" href="http://d1qwsfxu27215y.cloudfront.net/be73f85e2/css/en/ie/ie9.css" />
+<![endif]-->
+</head>
+<body class="background-default   authorized-user lang-en native-lang-ru">
+<div class="body-bg-top"></div><div class="body-bg-bot"></div>
+<div class="l-wrapper-content l-center " data-wrapper-content=""><div class="l-content l-center "><div class="l-content-inner">
+<div class="course-page course-course course-unfinished free-nav can-redo show-exercises" id="content" data-translation-context="course" data-clickable-text-listener="0" data-course-page="">
+<div class="course-header">
+	<a class="icons-back-list icons-back-to-level" href="../Course.html"></a>
+<% if (Page.HasName) { %>	<h3 class="course-title t-ellps" data-lesson-title=""><%# Lesson.Name %>: <%# Page.Name %></h3>
+<% } else { %>	<h3 class="course-title t-ellps" data-lesson-title=""><%# Course.Name %>. <%# Lesson.Name %></h3>
+<% } %></div>
+<div class="content-container-front"><div class="course-content" data-panel="">
+<div class="exercises theory minimaze-hard" data-block-exercise=""><div class="item-con"><div data-items-group="">
+<div class="item theory">
+	<h3 class="task-title line-blue-bottom no-title" data-tran-me="">  </h3>
+	<div class="a-center">
+<%# Page.Rule %>
+	<br>
+	</div></div></div></div></div></div>
+<% if (Page.HasPrev) { %><div class="prev-exersice-con"> <a class="prev-exersice" href="Lesson_<%# Page.PrevPage %>.html" data-btn-prev-slide=""></a> </div><% } %>
+<% if (Page.HasNext) { %><div class="next-exersice-con"> <a class="next-exersice" href="Lesson_<%# Page.NextPage %>.html" data-btn-next-slide=""></a> </div><% } %>
+</div></div></div></div></div>
+</body>
+</html>
